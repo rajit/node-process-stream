@@ -15,7 +15,21 @@ This module hopes to make that as easy as:
 
 ```node
 var ps = require('process-stream');
-fs.createReadStream('manifest.json').pipe(ps('./strip-comments.pl')).pipeTo('node get-authors').pipeOut('jsonpp');
+fs.createReadStream('manifest.json')
+    .pipe(ps('./strip-comments.pl'))
+    .pipeTo('node get-authors')
+    .pipeOut('jsonpp');
+```
+
+And maybe even improve upon the classic shell pipe:
+
+```node
+var ps = require('process-stream');
+var interestingStream = fs.createReadStream('manifest.json')
+    .pipe(ps('./strip-comments.pl'))
+    .pipeTo('node get-authors');
+interestingStream.pipeOut('jsonpp');
+interestingstream.pipe(fs.createWriteStream('authors.json'));
 ```
 
 # Why?
