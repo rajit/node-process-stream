@@ -1,0 +1,28 @@
+{
+  "name": "process-stream",
+  "version": "0.1.0",
+  "description": "Create and pipe between processes using node streams",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rajit/node-process-stream.git"
+  },
+  "keywords": [
+    "process",
+    "stream",
+    "node",
+    "pipe"
+  ],
+  "author": "Rajit Singh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rajit/node-process-stream/issues"
+  },
+  "homepage": "https://github.com/rajit/node-process-stream",
+  "devDependencies": {
+    "mocha": "^1.18.2"
+  }
+}
